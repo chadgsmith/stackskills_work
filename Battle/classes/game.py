@@ -68,11 +68,11 @@ class Person:
             i += 1
 
     def choose_magic(self):
-        i = 1
+        i = 0
 
         print("\n"+bcolors.OKBLUE + bcolors.BOLD + "    Magic" + bcolors.ENDC)
         for spell in self.magic:
-            print("        "+str(i) + ".", spell.name, "(cost:", str(spell.cost) + ")")
+            print("        "+str(i + 1)  + ".", spell.name, "(cost:", str(spell.cost) + ")")
             i += 1
 
     def choose_item(self):
@@ -88,7 +88,7 @@ class Person:
         print("\n" + bcolors.FAIL + bcolors.BOLD + "     TARGET:" + bcolors.ENDC)
         for enemy in enemies:
             if enemy.get_hp() != 0:
-                print("        " + str(i) +".", enemy.name + ":")
+                print("        " + str(i + 1) +".", enemy.name + ":")
                 i +=1
         choice = int(input("    Choose target:"))
         return choice
